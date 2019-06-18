@@ -6,26 +6,46 @@
 3 - 'AddWork()' which adds $5 to salary of employee if the number of hours of work per day is more than 6 hour
  */
 package com.YomiOluwadara.Abstraction;
+
+import java.util.Scanner;
+
 public class ObjectAndMethodsPract2 {
 	//declare instance variable
 	double employeeSalary;
 	double employeeHoursPerDay;
-	
- double  getInfo (double employeeSalary, double employeeHoursPerDay) {
-	 if(employeeSalary < 500) {
-		 employeeSalary = employeeSalary + 10; 
-	 }
-	 else {
-		 employeeSalary = employeeSalary;
-	 }
-	 return employeeSalary;
- }
- 
- 
- 
- 
-public static void main(String[] args) {
+	//class constructor that would be used when an object is called 
+	ObjectAndMethodsPract2() {
+		employeeSalary = this.employeeSalary;
+		employeeHoursPerDay = this.employeeHoursPerDay;
+	}
 
+double  salary (double employeeSalary) {
+		 if(employeeSalary < 500) {
+			 employeeSalary = employeeSalary + 10; 
+		 }
+		 else {
+			 employeeSalary = employeeSalary;
+		 }
+		 return employeeSalary;
+	 }
+double salaryBasedonHours(double employeeSalary) {
+	System.out.println("Enter employee hour");//
+	Scanner scan = new Scanner(System.in);
+	double hour = scan.nextDouble();
+	if(hour >6) {
+		employeeSalary = employeeSalary + 5;
+	}
+		else {
+			 employeeSalary = employeeSalary;
+		}
+	
+	return employeeSalary;
+}
+	 
+public static void main(String[] args) {
+	ObjectAndMethodsPract2 jose = new ObjectAndMethodsPract2 ();
+	System.out.println("This is salary based on how much I have been making " + jose.salary(300));
+	System.out.println("This is salary based on working more than 6 hours a day " + jose.salaryBasedonHours(300));
 
 }
 

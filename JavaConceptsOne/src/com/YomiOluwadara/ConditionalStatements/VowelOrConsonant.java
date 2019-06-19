@@ -22,19 +22,19 @@ private static boolean isAlphabetic(char userInput) {
 		char userInput = scan.next(".").charAt(0); 
 		System.out.println("You have entered : " + userInput);
 		//using the class to invoke the static method to check  if user input is an alphabet
-			VowelOrConsonant.isAlphabetic(userInput) ;
-			System.out.println("ERROR : You have not entered an alphabet");
-	//implementing the if to determine if input is a vowel or consonant
-		if(userInput == 'a' || userInput == 'e' || userInput == 'i' || userInput == 'o' || userInput == 'u') {
-			System.out.println("The alphabet you entered is a vovel");
-		}
+	while (	VowelOrConsonant.isAlphabetic(userInput)) ;
+		System.out.println("ERROR : You have not entered an alphabet");
 		
-		else {
-			System.out.println("You have entered a consonant");
-		}
+//implementing the if to determine if input is a vowel or consonant
+	if(userInput == 'a' || userInput == 'e' || userInput == 'i' || userInput == 'o' || userInput == 'u') {
+		System.out.println("The alphabet you entered is a vovel");
 	}
 	
-
+	else {
+		System.out.println("You have entered a consonant");
+	}
+		}
+		
 	public static void main(String[] args) {
 		VowelOrConsonant.alphabetDecider();
 

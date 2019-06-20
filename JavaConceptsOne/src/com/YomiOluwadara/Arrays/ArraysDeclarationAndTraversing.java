@@ -18,14 +18,15 @@ public class ArraysDeclarationAndTraversing {
 		AgeofSudentsTwoThree[3] = 32;
 		//traverse the array and print the contents
 		for(int i = 0;i<AgeofSudentsTwoThree.length; i++) {
-			System.out.print("Content of AgeOfStudents is ");
 			System.out.println( AgeOfStudents[i] );
-			
-		}
-		
-		
-		//String arrays
-
+			}
+	 //String arrays
+		   String[] nameArray= {"John", "Paul", "Ringo", "George","Yomi"};
+		   //traversing the array and printing it
+	        for (String name:nameArray)
+	        {
+	            System.out.println(name);
+	        }
+}
 	}
 
-}

@@ -1,5 +1,6 @@
 /*
-  Same Question as seen in ObjectAndMethodsPract1. java class but with different method implementation- method now accepts parameters while called
+  Same Question as seen in ObjectAndMethodsPract1. java class but with different method implementation- 
+method now accepts parameters while called
  * Write a program by creating an 'Employee' class having the following methods and print the final salary. -
 1 - 'getInfo()' which takes the salary, number of hours of work per day of employee as parameter
 2 - 'AddSal()' which adds $10 to salary of the employee if it is less than $500.

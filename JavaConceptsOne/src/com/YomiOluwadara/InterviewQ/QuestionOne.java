@@ -58,6 +58,7 @@ public class QuestionOne {
 		System.out.println("This is using the getter to pull info:   " + QuestionOne.getDiseasename());
 		
 		
+		
 
 	}
 

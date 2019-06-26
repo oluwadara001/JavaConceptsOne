@@ -59,6 +59,14 @@ public class EmployeeInfo {
 		this.employeeSalary = employeeSalary;
 	}
 	
+	public void setEmployeeContractEndDate(String employeeContractEndDate) {
+		this.employeeContractEndDate = employeeContractEndDate;
+	}
+	
+	public String getEmployeeContractEndDate() {
+		return employeeContractEndDate;
+	}
+	
 	// constructors that would be used to  set instantiate the class- overload them
 	EmployeeInfo (String employeeName,double employeeAge,String employeeRole,double employeeSalary) {
 		this.employeeName = employeeName;

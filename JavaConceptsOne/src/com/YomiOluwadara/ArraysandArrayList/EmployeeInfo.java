@@ -76,10 +76,30 @@ public class EmployeeInfo {
 	}
 
 // 2nd constructor- that has contract end date
+	EmployeeInfo (String employeeName,double employeeAge,String employeeRole,double employeeSalary,String employeeContractEndDate) {
+		this.employeeName = employeeName;
+		this.employeeAge = employeeAge;
+		this.employeeRole = employeeRole;
+		this.employeeSalary = employeeSalary;
+		this.employeeContractEndDate = employeeContractEndDate;
+	}
+	
+	//overload  this method to account for temporary  staff
+	public void printInfNotinList() {
+		System.out.println(this.employeeName);
+		System.out.println(this.employeeAge);
+		
+	}
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
+		// crating instances of the class
+		
+		EmployeeInfo Sally = new EmployeeInfo("Sally", 38, "Engeineer", 8500);
+		EmployeeInfo Amanda = new EmployeeInfo ("Amanda", 25, "HR Specialist", 55000, "12/12/2019");
+		System.out.println("This is  " + Sally  +  "being printed not from the list" );
+		System.out.println("This is  "  + Amanda + "being printed not from the list" );
+		
+		//crate an ArrayList object and store the elements in a list
 	}
 
 }

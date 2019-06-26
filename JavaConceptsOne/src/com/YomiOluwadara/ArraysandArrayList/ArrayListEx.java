@@ -1,7 +1,7 @@
 package com.YomiOluwadara.ArraysandArrayList;
 import java.util.*;
 public class ArrayListEx {
-//declare an ArrayList :List <Integer> name = new ArrayList<Integer>();
+//storing and ArrayList in a List - declaration:List <Integer> name = new ArrayList<Integer>();
 	
 	
 	

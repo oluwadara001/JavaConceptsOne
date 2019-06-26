@@ -3,6 +3,10 @@
  *hint: overload the constructor &
  */
 package com.YomiOluwadara.ArraysandArrayList;
+import java.util.HashMap;
+import java.util.Map;
+import java.util.*;
+
 
 public class EmployeeInfo {
 	String employeeName;
@@ -83,16 +87,13 @@ public class EmployeeInfo {
 		this.employeeSalary = employeeSalary;
 		this.employeeContractEndDate = employeeContractEndDate;
 	}
-	
-	//overload  this method to account for temporary  staff
-	public void printInfNotinList(String employeeName,double employeeAge,String employeeRole,double employeeSalary) {
-		System.out.println(employeeName);
-		System.out.println(employeeAge);
-		System.out.println(employeeRole);
-		System.out.println(employeeSalary);
-		
+	//3rd constructor that will be used for HashMap
+	EmployeeInfo (String employeeName,double employeeSalary){
+		this.employeeName = employeeName;
+		this.employeeSalary = employeeSalary;
 	}
-	public void printInfNotinList(String employeeName,double employeeAge,String employeeRole,double employeeSalary,String employeeContractEndDate) {
+	
+		public void printInfNotinListForTemp() {
 		System.out.println(employeeName);
 		System.out.println(employeeAge);
 		System.out.println(employeeRole);
@@ -100,16 +101,33 @@ public class EmployeeInfo {
 		System.out.println(employeeContractEndDate);
 		
 	}
+	
+	public void printInfNotinList() {
+		System.out.println(employeeName);
+		System.out.println(employeeAge);
+		System.out.println(employeeRole);
+		System.out.println(employeeSalary);
+		
+	}
+	
 
 	public static void main(String[] args) {
 		// crating instances of the class
 		
-		EmployeeInfo Sally = new EmployeeInfo("Sally", 38, "Engeineer", 8500);
-		EmployeeInfo Amanda = new EmployeeInfo ("Amanda", 25, "HR Specialist", 55000, "12/12/2019");
-		System.out.println("This is  " + Sally  +  "being printed not from the list" );
-		System.out.println("This is  "  + Amanda + "being printed not from the list" );
+		EmployeeInfo emlpyee = new EmployeeInfo("Sally", 38, "Engeineer", 8500);
+		EmployeeInfo employeeze = new EmployeeInfo ("Amanda", 25, "HR Specialist", 55000, "12/12/2019");
+		EmployeeInfo employeeOne = new EmployeeInfo ("Jonas", 86500.56);
 		
-		//crate an ArrayList object and store the elements in a list
+	
+		//using the instances to invoke the methods
+		emlpyee.printInfNotinList();
+		 employeeze.printInfNotinListForTemp();
+		
+		//crate an ArrayList object and store the elements in a list Map <datatype> name = new HashMap<datatype>();
+		 Map <String,Double> employeeHasMap = new HashMap <String,Double> ();
+		//adding elements to the HashMap
+		// CONTINUE, ON HOW TO PASS THE OBJECT REF TO THE HASHMAP
+		 
 	}
 
 }

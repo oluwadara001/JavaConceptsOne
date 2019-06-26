@@ -1,7 +1,7 @@
 /*Declare (using different methods) an array that stores ages of students in a class and print it
  * /*Declare (using different methods) an array that stores names of students in a class and print it
  */
-package com.YomiOluwadara.Arrays;
+package com.YomiOluwadara.ArraysandArrayList;
 
 public class ArraysDeclarationAndTraversing {
 

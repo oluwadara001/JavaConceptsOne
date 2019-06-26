@@ -23,7 +23,16 @@ catch(InputMismatchException e) {
 finally {
 	
 }
+//declaring the HashMap
  HashMap <String,String> medicationFrequency = new HashMap <String,String>();
+//adding values to the HashMap
+ medicationFrequency.put("Ibruprofen", "3 times a day");
+ medicationFrequency.put("PRN", "use as needed");
+ System.out.println(medicationFrequency);
+ System.out.println(medicationFrequency.size());
+ System.out.println(medicationFrequency.isEmpty());
+ //toString is not actually needed.
+ System.out.println(medicationFrequency.toString());
 }
 	}
 

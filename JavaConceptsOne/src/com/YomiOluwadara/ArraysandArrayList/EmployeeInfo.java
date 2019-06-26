@@ -92,7 +92,11 @@ public class EmployeeInfo {
 		this.employeeName = employeeName;
 		this.employeeSalary = employeeSalary;
 	}
-	
+	// 4th constructor- default that take no parameters, will use getters and setters
+		EmployeeInfo (){
+			
+		}
+		
 		public void printInfNotinListForTemp() {
 		System.out.println(employeeName);
 		System.out.println(employeeAge);
@@ -117,6 +121,14 @@ public class EmployeeInfo {
 		EmployeeInfo emlpyee = new EmployeeInfo("Sally", 38, "Engeineer", 8500);
 		EmployeeInfo employeeze = new EmployeeInfo ("Amanda", 25, "HR Specialist", 55000, "12/12/2019");
 		EmployeeInfo employeeOne = new EmployeeInfo ("Jonas", 86500.56);
+		//crate an instance of the class and use getters and setters to set value
+		EmployeeInfo justhired = new EmployeeInfo ();
+		justhired.setEmployeeName("Gena");
+		justhired.setEmployeeAge(43);
+		justhired.setEmployeeContractEndDate("2019/12/12");
+		justhired.setEmployeeSalary(10500.00);
+		justhired.setEmployeeRole("Senior Software Engineer");
+		justhired.printInfNotinList();
 		
 	
 		//using the instances to invoke the methods
@@ -126,7 +138,10 @@ public class EmployeeInfo {
 		//crate an ArrayList object and store the elements in a list Map <datatype> name = new HashMap<datatype>();
 		 Map <String,Double> employeeHasMap = new HashMap <String,Double> ();
 		//adding elements to the HashMap
-		// CONTINUE, ON HOW TO PASS THE OBJECT REF TO THE HASHMAP
+		 employeeHasMap.put("Patrick", 4500.00);
+		 employeeHasMap.put("Yomi", 79000.56);
+		 // print the content of the HashMap
+		 System.out.println(employeeHasMap +  " printed from HashMap without traversing with a FOR statement");
 		 
 	}
 

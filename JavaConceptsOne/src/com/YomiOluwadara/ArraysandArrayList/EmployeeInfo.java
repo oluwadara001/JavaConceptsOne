@@ -85,9 +85,19 @@ public class EmployeeInfo {
 	}
 	
 	//overload  this method to account for temporary  staff
-	public void printInfNotinList() {
-		System.out.println(this.employeeName);
-		System.out.println(this.employeeAge);
+	public void printInfNotinList(String employeeName,double employeeAge,String employeeRole,double employeeSalary) {
+		System.out.println(employeeName);
+		System.out.println(employeeAge);
+		System.out.println(employeeRole);
+		System.out.println(employeeSalary);
+		
+	}
+	public void printInfNotinList(String employeeName,double employeeAge,String employeeRole,double employeeSalary,String employeeContractEndDate) {
+		System.out.println(employeeName);
+		System.out.println(employeeAge);
+		System.out.println(employeeRole);
+		System.out.println(employeeSalary);
+		System.out.println(employeeContractEndDate);
 		
 	}
 

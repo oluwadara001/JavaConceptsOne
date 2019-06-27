@@ -1,8 +1,8 @@
 /*
- * practising custome type of date and using a date instance to invoke available methods in the date class
+ * Practicing custom type of date and using a date instance to invoke available methods in the date class
  */
 package com.YomiOluwadara.DateClass;
-
+//import java.sql.Date;  // this extends the date class
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.*; // always import all to avoid issues 
@@ -12,11 +12,10 @@ public class DateDeclaration {
  Date medicationStartDate ;
  Date medicationEndDate;
  
- 
- // defining setters and getters for the variables
  public void setMedicationStartDate(Date medicationStartDate) {
-	 this.medicationStartDate = medicationStartDate;
- }
+	this.medicationStartDate = medicationStartDate;
+}
+
  public void setMedicationEndDate(Date medicationEndDate) {
 	 this.medicationEndDate = medicationEndDate;
  }
@@ -28,8 +27,6 @@ public class DateDeclaration {
 	 return medicationEndDate;
  }
 
-
- 
 //constructors - they will be overloaded so that I can be able to leverage them when I want the instance/object to use the setters and getters to get values
  DateDeclaration () {
 	 
@@ -45,7 +42,9 @@ public class DateDeclaration {
  }
 	public static void main(String[] args) {
 		
-		 SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+		 //SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+		// SimpleDateFormat ft = new SimpleDateFormat ("E '/yyyy/mm/dd '");
+		 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 		
 	//crating an instance from the constructor the does not take parameters and using the instance to invoke methods from the Date API
 		Date medStartDate = new Date();
@@ -56,7 +55,7 @@ public class DateDeclaration {
 		System.out.println("-------------------------------------------------------");
 		//use the second constructor to crate another instance/object and use that object to invoke setters and getters
 		DateDeclaration myobject = new DateDeclaration();
-		myobject.setMedicationStartDate(2019.07.01 );
+		//myobject.setMedicationStartDate(2019-06-28);
 		
 
 		

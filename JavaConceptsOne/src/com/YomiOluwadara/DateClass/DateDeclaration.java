@@ -31,21 +31,35 @@ public class DateDeclaration {
 
  
 //constructors - they will be overloaded so that I can be able to leverage them when I want the instance/object to use the setters and getters to get values
- void DateDeclaration () {
+ DateDeclaration () {
 	 
  }
 //constructor 2 
- void DateDeclaration (Date medicationStartDate, Date medicationEndDate) {
+ DateDeclaration (Date medicationStartDate, Date medicationEndDate) {
 	 this.medicationStartDate = medicationStartDate;
 	 this.medicationEndDate = medicationEndDate;
  }
  
+ void printMedicationInfo() {
+	 
+ }
 	public static void main(String[] args) {
 		
-	
+		 SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
+		
+	//crating an instance from the constructor the does not take parameters and using the instance to invoke methods from the Date API
 		Date medStartDate = new Date();
 		System.out.println(medStartDate.toString());
+		System.out.println(medStartDate.getTime());
+		System.out.println(medStartDate.after(medStartDate)); //  method compares date to another date
+		System.out.println(medStartDate.getTimezoneOffset());
+		System.out.println("-------------------------------------------------------");
+		//use the second constructor to crate another instance/object and use that object to invoke setters and getters
+		DateDeclaration myobject = new DateDeclaration();
+		myobject.setMedicationStartDate(2019.07.01 );
+		
 
+		
 		
 		
 

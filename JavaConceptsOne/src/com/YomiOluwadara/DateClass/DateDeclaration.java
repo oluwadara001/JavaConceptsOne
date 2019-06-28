@@ -2,7 +2,7 @@
  * Practicing custom type of date and using a date instance to invoke available methods in the date class
  */
 package com.YomiOluwadara.DateClass;
-//import java.sql.Date;  // this extends the date class
+
 import java.util.Date;
 import java.text.SimpleDateFormat;
 import java.util.*; // always import all to avoid issues 
@@ -41,21 +41,20 @@ public class DateDeclaration {
 	 
  }
 	public static void main(String[] args) {
+		//crating an instance from the constructor the does not take parameters and using the instance to invoke methods from the Date API
+				Date medStartDate = new Date();
+				System.out.println(medStartDate.toString());
+				System.out.println(medStartDate.getTime());
+				System.out.println(medStartDate.after(medStartDate)); //  method compares date to another date
+				System.out.println(medStartDate.getTimezoneOffset());
+				System.out.println("-------------------------------------------------------");
+				//use the second constructor to crate another instance/object and use that object to invoke setters and getters
 		
-		 //SimpleDateFormat ft = new SimpleDateFormat ("E yyyy.MM.dd 'at' hh:mm:ss a zzz");
-		// SimpleDateFormat ft = new SimpleDateFormat ("E '/yyyy/mm/dd '");
+		 
 		 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 		
-	//crating an instance from the constructor the does not take parameters and using the instance to invoke methods from the Date API
-		Date medStartDate = new Date();
-		System.out.println(medStartDate.toString());
-		System.out.println(medStartDate.getTime());
-		System.out.println(medStartDate.after(medStartDate)); //  method compares date to another date
-		System.out.println(medStartDate.getTimezoneOffset());
-		System.out.println("-------------------------------------------------------");
-		//use the second constructor to crate another instance/object and use that object to invoke setters and getters
 		DateDeclaration myobject = new DateDeclaration();
-		//myobject.setMedicationStartDate(2019-06-28);
+		//myobject.setMedicationStartDate(2019-06-30);
 		
 
 		

@@ -4,6 +4,7 @@
 package com.YomiOluwadara.DateClass;
 
 import java.util.Date;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*; // always import all to avoid issues 
 
@@ -31,7 +32,7 @@ public class DateDeclaration {
  DateDeclaration () {
 	 
  }
-//constructor 2 
+//constructor 2 (to set values of the date variables)
  DateDeclaration (Date medicationStartDate, Date medicationEndDate) {
 	 this.medicationStartDate = medicationStartDate;
 	 this.medicationEndDate = medicationEndDate;
@@ -49,12 +50,43 @@ public class DateDeclaration {
 				System.out.println(medStartDate.getTimezoneOffset());
 				System.out.println("-------------------------------------------------------");
 				//use the second constructor to crate another instance/object and use that object to invoke setters and getters
+				DateDeclaration myobject = new DateDeclaration();
+				SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+				//assign value to Date variables  medicationStartDate & medicationEndDate
+				
+				/*
+				try {
+					myobject.setMedicationStartDate( sdf.parse("2019-07-01"));
+				} catch (ParseException e) {
+					System.out.println("Error occurred while parsing in date " + e.toString());
+				}
+				*/
+				//setting values for the date variables and using the parse method to pass it
+				try {
+					myobject.medicationStartDate =  sdf.parse("2019-06-24") ;
+				} catch (ParseException e) {
+					System.out.println("Error occurred while parsing in date " + e.toString());
+				}
+				finally {
+					
+				}
+				
+				try {
+					myobject.medicationEndDate = sdf.parse("2019-07-11") ;
+				} catch (ParseException e1) {
+					System.out.println("Error occurred while parsing in date " + e1.toString());
+					
+				}
+				finally {
+					
+				}
+				System.out.println("Med start date obtained from constructor is  " + myobject.getMedicationStartDate());
+				System.out.println("Med end date obtained from constructor is  " +  myobject.getMedicationEndDate());
+				System.out.println("-------------------------------------------------------");
+				
+		  
 		
-		 
-		 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 		
-		DateDeclaration myobject = new DateDeclaration();
-		myobject.setMedicationStartDate(null);;
 		
 
 		

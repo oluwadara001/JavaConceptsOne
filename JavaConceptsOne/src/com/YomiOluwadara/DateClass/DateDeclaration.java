@@ -54,7 +54,7 @@ public class DateDeclaration {
 		 SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-mm-dd");
 		
 		DateDeclaration myobject = new DateDeclaration();
-		//myobject.setMedicationStartDate(2019-06-30);
+		myobject.setMedicationStartDate(null);;
 		
 
 		

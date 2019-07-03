@@ -34,5 +34,22 @@ public class Medication {
     public void setMedicationFrequencyList (List<Frequency> medicationFrequencyList) {
  	   this.medicationFrequencyList = medicationFrequencyList;
     }
+    public List<Frequency> getMedicationFrequencyList(){
+    	return medicationFrequencyList;
+    }
+    
+    //create class constructors - does not include List in its definition
+    //constructor 1
+    public Medication (String medicationName,Date medicationStartDate,Date medicationEndDate) {
+    	this.medicationName = medicationName;
+    	this.medicationStartDate = medicationStartDate;
+    	this.medicationEndDate = medicationEndDate;
+    }
+    
+    //constructor 2 - does not have medicationEndDate
+    public Medication (String medicationName,Date medicationStartDate) {
+    	this.medicationName = medicationName;
+    	this.medicationStartDate = medicationStartDate;
+    }	
      
 }

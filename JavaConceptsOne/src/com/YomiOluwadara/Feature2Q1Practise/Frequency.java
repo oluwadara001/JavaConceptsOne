@@ -18,7 +18,7 @@ public class Frequency {
 	Frequency(Frequency timeOfDay){
 		this.timeOfDay = timeOfDay;
 	}
-	//enum
+	//enum declaration
 	public enum allPossibleTimeToTakeMedication{
 		as_needed
 		,once_every_four_hours

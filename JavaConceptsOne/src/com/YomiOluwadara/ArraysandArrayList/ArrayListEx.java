@@ -10,6 +10,8 @@ public class ArrayListEx {
 		MedicationFrequency	.add(23);
 		MedicationFrequency	.add(23);
 		MedicationFrequency	.add(213);
+		MedicationFrequency.get(2);
+		
 		System.out.println(MedicationFrequency);
 
 	}

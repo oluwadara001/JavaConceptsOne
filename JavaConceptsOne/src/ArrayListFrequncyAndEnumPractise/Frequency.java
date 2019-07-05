@@ -1,6 +1,7 @@
 /*
  * First step: create enum to hold all possible values.
  * second step:create a variable of type enum,create getters and setters
+ * third step: create constructor
  */
 package ArrayListFrequncyAndEnumPractise;
 

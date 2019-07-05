@@ -51,5 +51,9 @@ public class Medication {
     	this.medicationName = medicationName;
     	this.medicationStartDate = medicationStartDate;
     }	
+    // constructor 3- default : takes no parameter
+    public Medication (){
+    	
+    }
      
 }

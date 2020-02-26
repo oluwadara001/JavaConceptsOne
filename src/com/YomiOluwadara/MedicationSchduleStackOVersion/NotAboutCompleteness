@@ -1,0 +1,5 @@
+When you get a prescription from a pharmacy, there is a start date associated with the medication. Medications also have a scheduled frequency that tells you when to take the doses. There are fairly common patterns for the frequencies. You can take them every 4 hours. You can take them once a day. You can take them with meals or just before bed. You can also take them PRN or "as needed." Many medications also have a stop. You may need to take the medication for 7 days. You may need to take a certain number of doses. You may also take the medication for the rest of your life. Assume you have to implement a system to tell nurses when a patient should receive medications. How would you model a schedule for a medication that handles start dates, end dates, and frequencies?
+
+I have done basic design ..but I'm stuck with implementing the schedule functionality (notification functionality that notifies the nurse bout medicine frequency )
+
+The solution i have is

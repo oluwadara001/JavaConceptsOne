@@ -3,7 +3,7 @@
  */
 package CustomDatatype_RegisterStudentProj;
 
-import java.util.Calendar;
+import java.util.Date;
 import java.util.UUID;
 
 /**
@@ -13,7 +13,7 @@ import java.util.UUID;
 public class Student {
 	private String studentFName;
 	private String studentLName;
-	private Calendar studentDOB;
+	private Date studentDOB;
 	private UUID studentId;
 	private Gender gender;
 	private int phoneNumber;
@@ -34,11 +34,11 @@ public class Student {
 		this.studentLName = studentLName;
 	}
 
-	public Calendar getStudentDOB() {
+	public Date getStudentDOB() {
 		return studentDOB;
 	}
 
-	public void setStudentDOB(Calendar studentDOB) {
+	public void setStudentDOB(Date studentDOB) {
 		this.studentDOB = studentDOB;
 	}
 
@@ -74,7 +74,7 @@ public class Student {
 	}
 
 	// constructor
-	public Student(String studentFName, String studentLName, Calendar studentDOB, UUID studentId, Gender gender,
+	public Student(String studentFName, String studentLName, Date studentDOB, UUID studentId, Gender gender,
 			int phoneNumber) {
 		super();
 		this.studentFName = studentFName;

@@ -6,7 +6,7 @@ public class DriverClass {
 
 		StudentService StudentServiceObj = new StudentService();
 
-		StudentServiceObj.getAllStudents();
+		StudentServiceObj.collectStudentInfo();
 
 	}
 

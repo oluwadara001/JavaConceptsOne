@@ -28,9 +28,11 @@ import java.util.Scanner;
 public class ReadFileByScannerAndSaveFileToAlocation {
 
 	public void readFileAndWriteIt() {
+		// specifies location of file to read and using scanner obj to read file
 		File file = new File("C:\\Users\\oo046152\\mytestfile.txt");
 		try {
 			Scanner scanner = new Scanner(file);
+			// variable to hold new file
 			String newFile = "";
 			while (scanner.hasNextLine()) {
 				// storing the content of input file to a file that will be exported

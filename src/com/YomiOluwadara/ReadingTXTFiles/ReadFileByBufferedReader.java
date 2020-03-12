@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.YomiOluwadara.ReadingFiles;
+package com.YomiOluwadara.ReadingTXTFiles;
 
 import java.io.BufferedReader;
 import java.io.File;

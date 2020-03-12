@@ -1,4 +1,4 @@
-package com.YomiOluwadara.ReadingFiles;
+package com.YomiOluwadara.ReadingTXTFiles;
 
 import java.io.File;
 import java.io.FileNotFoundException;

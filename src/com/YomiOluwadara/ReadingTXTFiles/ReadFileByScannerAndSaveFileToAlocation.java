@@ -35,7 +35,8 @@ public class ReadFileByScannerAndSaveFileToAlocation {
 			// variable to hold new file
 			String newFile = "";
 			while (scanner.hasNextLine()) {
-				// storing the content of input file to a file that will be exported
+				// checking if there is a next line in the file and storing the content of input
+				// file to a file that will be exported
 				newFile = newFile.concat(scanner.nextLine() + "\n");
 				// Using the FileWriter object to specify location,write and close file
 				FileWriter fileWriter = new FileWriter("C:\\Users\\oo046152\\Desktop\\fileFromJava.txt");

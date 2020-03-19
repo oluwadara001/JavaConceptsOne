@@ -5,6 +5,8 @@ package com.YomiOluwadara.ReadingTXTFiles;
 
 import java.io.File;
 import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.Scanner;
 
 /**
@@ -59,32 +61,48 @@ public class ReadValidateAndWrite {
 		System.out.println("What would you like to do ? ");
 		System.out.println("Enter '1' to validate the content of the file ");
 		System.out.println("Enter '2' to exit the service");
-		// using the setter methid to set user choce
+		// using the setter method to set user choice
 		setUserChoice(new Scanner(System.in).nextInt());
 
 		switch (getUserChoice()) {
+
 		case 1:
-			validateContent();
+			validateFileAndWriteIt();
+			break;
 		case 2:
 			exitSystem();
+			break;
 		}
 
 	}
 
 	void exitSystem() {
-		System.out.println(" You have decided to exi the system, exiting.......");
+		System.out.println(" You have decided to exit the system, exiting.......");
 	}
 
 //ingests the file and do some checks
-	public void validateContent() {
+	public void validateFileAndWriteIt() {
+		System.out.println("test-printing from validate content");
 		File file = new File("C:\\Users\\oo046152\\mytestfile.txt");
 		try {
 			Scanner scanner = new Scanner(file);
 			// variable to hold a sentence read from the i/p file
-			String hasNextLine;
-			while (scanner.nextLine().contains("obafemi")) {
-				readOAU();
-				System.out.println("test-printing from validat content");
+			final String wordToFind = "NIGERIA";
+			String newFile = "";
+			while (scanner.nextLine().contains(wordToFind) && scanner.hasNextLine()) {
+				newFile = newFile.concat(scanner.nextLine() + "/n");
+				System.out.println("test-printing from validate and write file method");
+
+			}
+			try {
+				FileWriter outPutFile = new FileWriter("C:\\Users\\oo046152\\mytestfile2.txt");
+				outPutFile.write(newFile);
+				outPutFile.flush();
+				outPutFile.close();
+
+			} catch (IOException e) {
+				System.out.println("file written succesfully");
+				e.printStackTrace();
 			}
 
 		} catch (FileNotFoundException e) {
@@ -93,9 +111,28 @@ public class ReadValidateAndWrite {
 
 	}
 
-	public void readOAU() {
-
-	}
+	/*
+	 * public void readOAU() { System.out.println("from read oau"); String newfile =
+	 * ""; File file = new File("C:\\Users\\oo046152\\mytestfile.txt"); try {
+	 * Scanner scanner = new Scanner(file); while (scanner.hasNextLine()) { newfile
+	 * = newfile.concat(scanner.nextLine() + "/n"); try { FileWriter outputFile =
+	 * new FileWriter("C:\\Users\\oo046152\\Desktop\\fileFromJava2.txt");
+	 * outputFile.write(newfile); outputFile.flush(); outputFile.close();
+	 * System.out.println(
+	 * "File has been writen to  'C:\\\\Users\\\\oo046152\\\\Desktop\\\\fileFromJava2.txt' "
+	 * );
+	 * 
+	 * } catch (IOException e) {
+	 * System.out.println("Error writing file to specified location");
+	 * e.printStackTrace(); }
+	 * 
+	 * } } catch (FileNotFoundException e) { System.out.println("File not found");
+	 * e.printStackTrace();
+	 * 
+	 * }
+	 * 
+	 * }
+	 */
 
 	public static void main(String[] args) {
 		ReadValidateAndWrite ReadValidateAndWriteObj = new ReadValidateAndWrite();

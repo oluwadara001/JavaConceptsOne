@@ -4,6 +4,7 @@
 package com.YomiOluwaara.Student_JUnit;
 
 import java.util.Scanner;
+import java.util.UUID;
 
 /**
  * @author OO046152 : Yomi Oluwadara
@@ -11,8 +12,10 @@ import java.util.Scanner;
  *         Contains methods that relates to student academic record
  */
 public class StudentFinalScore {
+	// write constructors after all variable have been declared
 	private String studFName;
 	private String studLastName;
+	private UUID studId;
 
 	public String getStudFName() {
 		return studFName;
@@ -28,6 +31,14 @@ public class StudentFinalScore {
 
 	public void setStudLastName(String studLastName) {
 		this.studLastName = studLastName;
+	}
+
+	public UUID getStudId() {
+		return studId;
+	}
+
+	public void setStudId(UUID studId) {
+		this.studId = studId;
 	}
 
 	// method to take student names from input and return it
@@ -48,7 +59,15 @@ public class StudentFinalScore {
 		System.out.println("name are " + studFName + " and " + studLastName);
 
 		return studFName + studLastName;
+	}
 
+	// method that generates student id and returns it
+	@SuppressWarnings("static-access")
+	public UUID studID() {
+		UUID id = UUID.randomUUID();
+		setStudId(id);
+		System.out.println(" student id is " + getStudId());
+		return getStudId();
 	}
 
 }

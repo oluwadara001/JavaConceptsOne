@@ -11,7 +11,8 @@ public class StudentFinalScoreDriver {
 
 	public static void main(String[] args) {
 		StudentFinalScore StudentFinalScoreObj = new StudentFinalScore();
-		StudentFinalScoreObj.studNames("oluwadara", "yomi");
+		// StudentFinalScoreObj.studNames("oluwadara", "yomi");
+		StudentFinalScoreObj.studID();
 
 	}
 

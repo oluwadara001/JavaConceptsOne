@@ -10,9 +10,13 @@ package com.YomiOluwaara.Student_JUnit;
 public class StudentFinalScoreDriver {
 
 	public static void main(String[] args) {
+
 		StudentFinalScore StudentFinalScoreObj = new StudentFinalScore();
-		// StudentFinalScoreObj.studNames("oluwadara", "yomi");
-		StudentFinalScoreObj.studID();
+		// StudentFinalScoreObj.studNames();
+		// StudentFinalScoreObj.studTestScore();
+		// StudentFinalScoreObj.studExamScore();
+		StudentFinalScoreObj.studFinalScore();
+		// StudentFinalScoreObj.studFinalGrade();
 
 	}
 

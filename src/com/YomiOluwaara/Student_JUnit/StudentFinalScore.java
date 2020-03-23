@@ -79,6 +79,25 @@ public class StudentFinalScore {
 		this.studGrade = studGrade;
 	}
 
+	// @overloaded class: parameterized constructor-for setting intial values when
+	// class is instantiated
+	public StudentFinalScore(String studFName, String studLastName, UUID studId, double studTestscore,
+			double studExamScore, double finalScore, studGradeScale studGrade) {
+		super();
+		this.studFName = studFName;
+		this.studLastName = studLastName;
+		this.studId = studId;
+		this.studTestscore = studTestscore;
+		this.studExamScore = studExamScore;
+		this.finalScore = finalScore;
+		this.studGrade = studGrade;
+	}
+
+	// overloaded constructor : default
+	public StudentFinalScore() {
+
+	}
+
 	public String studNames() {
 		System.out.println("Enter student First name");
 		setStudFName(new Scanner(System.in).nextLine());
@@ -124,7 +143,7 @@ public class StudentFinalScore {
 		System.out.println("enter student exam score (must not be more greater than 70) ");
 		setStudExamScore(new Scanner(System.in).nextDouble());
 		if (getStudExamScore() <= 70) {
-			System.out.println("Student exams socre is " + getStudExamScore());
+			System.out.println("Student exams score is " + getStudExamScore());
 			return getStudExamScore();
 		} else
 			System.out.println("Invalid score has been entered");

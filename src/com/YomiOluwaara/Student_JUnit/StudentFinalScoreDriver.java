@@ -12,11 +12,12 @@ public class StudentFinalScoreDriver {
 	public static void main(String[] args) {
 
 		StudentFinalScore StudentFinalScoreObj = new StudentFinalScore();
-		// StudentFinalScoreObj.studNames();
-		// StudentFinalScoreObj.studTestScore();
-		// StudentFinalScoreObj.studExamScore();
+		StudentFinalScoreObj.studNames();
+		StudentFinalScoreObj.studID();
+		StudentFinalScoreObj.studTestScore();
+		StudentFinalScoreObj.studExamScore();
 		StudentFinalScoreObj.studFinalScore();
-		// StudentFinalScoreObj.studFinalGrade();
+		StudentFinalScoreObj.studFinalGrade();
 
 	}
 

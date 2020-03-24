@@ -168,7 +168,7 @@ public class StudentFinalScore {
 			System.out.println("Student final grade is " + studGradeScale.B);
 		} else if (getFinalScore() >= 90 && getFinalScore() <= 100) {
 			System.out.println("Student final grade is " + studGradeScale.A);
-			System.out.println("yay");
+
 		}
 
 	}

@@ -26,7 +26,7 @@ class StudentServiceTest {
 		StudentService studentService = new StudentService();
 		ArrayList<List> studentInfo = new ArrayList<List>();
 		// List actual [] = studentService.printStudentInfoIntoList();
-		Object[] expected = { "apple", "mango", "grape" };
+		Object[] expected = { "apple", "mango", };
 		// assertArrayEquals(expected, actual, () -> "TEST FAILED: expecting " +
 		// expected + " returned " + actual);
 

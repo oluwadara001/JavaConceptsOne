@@ -8,6 +8,7 @@ import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.InputMismatchException;
+import java.util.List;
 import java.util.Scanner;
 import java.util.UUID;
 
@@ -75,7 +76,8 @@ public class StudentService extends Student {
 		} finally {
 			System.out.println("The student information we have on file is");
 			// calling the printStudentInfo() from the finally block
-			printStudentInfo();
+			// printStudentInfo();
+			printStudentInfoIntoList();
 		}
 
 	}
@@ -98,6 +100,27 @@ public class StudentService extends Student {
 			studentInfo.add(getPhoneNumber());
 			System.out.println(studentInfo);
 		}
+	}
+
+	// returns the student info as a List
+	public List printStudentInfoIntoList() {
+		// ArayList of type Object to hold multiple data types in one ArrayList
+		ArrayList<Object> studentInfo = new ArrayList<Object>();
+		String phoneNo = String.valueOf(getPhoneNumber()); // convert phone to String so can validate
+		if (getStudentFName().isEmpty() || getStudentLName().isEmpty() || getStudentDOB() == null || getGender() == null
+				|| getStudentId() == null || phoneNo.length() != 10) {
+			System.out.println("One of the student information is not correct,check and try again");
+
+		} else {
+			studentInfo.add(getStudentFName());
+			studentInfo.add(getStudentLName());
+			studentInfo.add(getStudentDOB());
+			studentInfo.add(getGender());
+			studentInfo.add(getStudentId());
+			studentInfo.add(getPhoneNumber());
+		}
+		System.out.println(studentInfo);
+		return studentInfo;
 
 	}
 

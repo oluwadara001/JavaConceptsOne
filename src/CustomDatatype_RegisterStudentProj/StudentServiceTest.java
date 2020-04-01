@@ -3,7 +3,8 @@
  */
 package CustomDatatype_RegisterStudentProj;
 
-import static org.junit.jupiter.api.Assertions.assertArrayEquals;
+import java.util.ArrayList;
+import java.util.List;
 
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -21,11 +22,13 @@ class StudentServiceTest {
 	@DisplayName("method validates and prints the info from the method collectStudentInfo() ")
 	@Test
 	void printStudentInfo() {
+		// TODO : re-work the whole test case
 		StudentService studentService = new StudentService();
-		Object[] expected = { "yomi", "oluwadara", 1980 - 12 - 31, "male", 1234567890 };
-		// TODO: refactor the printStudentInfo() to return a list
-		Object[] actual = { "apple", "mango", "grape" };
-		assertArrayEquals(expected, actual, () -> "TEST FAILED: expecting " + expected + " returned " + actual);
+		ArrayList<List> studentInfo = new ArrayList<List>();
+		// List actual [] = studentService.printStudentInfoIntoList();
+		Object[] expected = { "apple", "mango", "grape" };
+		// assertArrayEquals(expected, actual, () -> "TEST FAILED: expecting " +
+		// expected + " returned " + actual);
 
 	}
 

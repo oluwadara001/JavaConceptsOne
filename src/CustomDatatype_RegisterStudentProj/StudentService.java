@@ -103,6 +103,7 @@ public class StudentService extends Student {
 	}
 
 	// returns the student info as a List
+	@SuppressWarnings("rawtypes")
 	public List printStudentInfoIntoList() {
 		// ArayList of type Object to hold multiple data types in one ArrayList
 		ArrayList<Object> studentInfo = new ArrayList<Object>();

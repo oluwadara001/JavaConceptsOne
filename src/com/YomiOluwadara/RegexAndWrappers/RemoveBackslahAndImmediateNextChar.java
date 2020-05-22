@@ -1,7 +1,7 @@
 /**
  * 
  */
-package com.YomiOluwadara.Regex;
+package com.YomiOluwadara.RegexAndWrappers;
 
 /**
  * @author OO046152

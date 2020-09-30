@@ -32,7 +32,7 @@ public class StudentService extends Student {
 	public void collectStudentInfo() {
 		System.out.println("Enter Student First Name");
 		try {
-			// setting student names
+			// setting student names using object of the Scanner class
 			setStudentFName(new Scanner(System.in).nextLine());
 			System.out.println("Enter Student Last Name");
 			setStudentLName(new Scanner(System.in).nextLine());

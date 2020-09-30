@@ -73,10 +73,9 @@ public class Student {
 				+ ", studentId=" + studentId + ", gender=" + gender + ", phoneNumber=" + phoneNumber + "]";
 	}
 
-	// constructor
+	// parameterized constructor
 	public Student(String studentFName, String studentLName, Date studentDOB, UUID studentId, Gender gender,
 			int phoneNumber) {
-		super();
 		this.studentFName = studentFName;
 		this.studentLName = studentLName;
 		this.studentDOB = studentDOB;
@@ -85,6 +84,7 @@ public class Student {
 		this.phoneNumber = phoneNumber;
 	}
 
+//default constructor
 	public Student() {
 
 	}
